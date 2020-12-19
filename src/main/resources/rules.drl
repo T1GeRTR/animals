@@ -1,0 +1,23 @@
+import com.t1gerok.model.Animal;
+import com.t1gerok.service.Counter;
+
+rule "Rule1"
+when
+    a: Animal(a.type=='ТРАВОЯДНОЕ')
+then
+    Counter.addRule1();
+end;
+
+rule "Rule2"
+when
+    a: Animal((a.type=='ТРАВОЯДНОЕ' || a.type=='ПЛОТОЯДНОЕ') && a.growth == 'МАЛЕНЬКОЕ')
+then
+    Counter.addRule2();
+end;
+
+rule "Rule3"
+when
+    a: Animal(a.type=='ВСЕЯДНОЕ' && a.growth != 'ВЫСОКОЕ')
+then
+    Counter.addRule3();
+end;
