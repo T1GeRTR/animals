@@ -1,6 +1,6 @@
 package com.t1gerok.daoimpl;
 
-import com.t1gerok.dao.InputAnimalsReader;
+import com.t1gerok.dao.InputAnimalsReaderDao;
 import com.t1gerok.model.Animal;
 
 import java.io.*;
@@ -8,11 +8,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputAnimalsReaderImpl implements InputAnimalsReader {
+public class InputAnimalsReaderDaoImpl implements InputAnimalsReaderDao {
     private File file;
     private String splitter;
 
-    public InputAnimalsReaderImpl(File file, String splitter) {
+    public InputAnimalsReaderDaoImpl(File file, String splitter) {
         this.file = file;
         this.splitter = splitter;
     }

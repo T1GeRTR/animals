@@ -1,14 +1,14 @@
 package com.t1gerok.service;
 
-import com.t1gerok.dao.InputAnimalsReader;
+import com.t1gerok.dao.InputAnimalsReaderDao;
 import com.t1gerok.model.Animal;
 import org.kie.api.runtime.KieSession;
 
 public class AnimalService {
-    private final InputAnimalsReader fileReader;
+    private final InputAnimalsReaderDao fileReader;
     private final KieSession session;
 
-    public AnimalService(InputAnimalsReader fileReader, KieSession session) {
+    public AnimalService(InputAnimalsReaderDao fileReader, KieSession session) {
         this.fileReader = fileReader;
         this.session = session;
     }

@@ -4,6 +4,6 @@ import com.t1gerok.model.Animal;
 
 import java.util.List;
 
-public interface InputAnimalsReader {
+public interface InputAnimalsReaderDao {
     List<Animal> read();
 }

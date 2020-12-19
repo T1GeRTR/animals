@@ -7,18 +7,18 @@ import org.junit.Test;
 import java.io.File;
 import java.util.List;
 
-public class TestInputFileReaderImpl {
+public class TestInputAnimalsReaderDaoImpl {
 
     @Test
     public void testRead() {
-        InputAnimalsReaderImpl fileReader = new InputAnimalsReaderImpl(new File(".\\animals.csv"), ",");
+        InputAnimalsReaderDaoImpl fileReader = new InputAnimalsReaderDaoImpl(new File(".\\animals.csv"), ",");
         List<Animal> animals = fileReader.read();
         Assert.assertEquals(3, animals.size());
     }
 
     @Test
     public void testReadFail() {
-        InputAnimalsReaderImpl fileReader = new InputAnimalsReaderImpl(new File(".\\wrongFile.csv"), ",");
+        InputAnimalsReaderDaoImpl fileReader = new InputAnimalsReaderDaoImpl(new File(".\\wrongFile.csv"), ",");
         List<Animal> animals = fileReader.read();
         Assert.assertEquals(0, animals.size());
     }
